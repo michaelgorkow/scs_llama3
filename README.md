@@ -79,7 +79,7 @@ docker push <ORGNAME>-<ACCTNAME>.registry.snowflakecomputing.com/LLAMA3/PUBLIC/I
 
 ### 4. Upload the Service Specification
 You can use Snowflake's UI to upload the llama3_8b_spec.yml to @LLAMA3.PUBLIC.CONTAINER_FILES.  
-<img src="assets/file_upload.png" width="50%" height="50%">
+<img src="assets/file_upload.png" width="70%" height="70%">
 
 ### 5. Create the Llama 3 Service
 ```sql

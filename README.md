@@ -130,3 +130,5 @@ SELECT LLAMA3.PUBLIC.LLAMA3_8B_COMPLETE_CUSTOM(
 ```
 
 ## Demo Video
+https://github.com/michaelgorkow/scs_llama3/assets/28981844/89a4422c-ba74-456b-b081-4f358bc2509f
+

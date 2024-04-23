@@ -1,0 +1,26 @@
+spec:
+  container:
+  - name: llama3-8b-service-container
+    image: /llama3/public/image_repository/llama3_service:latest
+    resources:
+      requests:
+        nvidia.com/gpu: 1
+      limits:
+        nvidia.com/gpu: 1
+    env:
+      LLAMA3_MODEL: meta-llama/Meta-Llama-3-8B-Instruct
+    secrets:
+    - snowflakeSecret: llama3.public.huggingface_token
+      secretKeyRef: SECRET_STRING
+      envVarName: HF_TOKEN
+    volumeMounts:
+      - name: llama3-models
+        mountPath: /llama3_models
+  endpoint:
+  - name: api
+    port: 9000
+  volume:
+  - name: llama3-models
+    source: "@LLAMA3.PUBLIC.LLAMA3_MODELS"
+    uid: 1000
+    gid: 1000

@@ -73,7 +73,7 @@ git clone https://github.com/michaelgorkow/scs_llama3.git
 ### 3. Build & Upload the container
 ```cmd
 cd scs_llama3
-docker build -t <ORGNAME>-<ACCTNAME>.registry.snowflakecomputing.com/LLAMA3/PUBLIC/IMAGE_REPOSITORY/llama3_service:latest .
+docker build --platform linux/amd64 -t <ORGNAME>-<ACCTNAME>.registry.snowflakecomputing.com/LLAMA3/PUBLIC/IMAGE_REPOSITORY/llama3_service:latest .
 docker push <ORGNAME>-<ACCTNAME>.registry.snowflakecomputing.com/LLAMA3/PUBLIC/IMAGE_REPOSITORY/llama3_service:latest
 ```
 
